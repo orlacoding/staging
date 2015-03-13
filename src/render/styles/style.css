@@ -1,0 +1,609 @@
+
+/*
+ * Custom Css Stylesheet Additions
+ * Seneca Website
+ *
+ * Distributing author: BlueBottleDesign (www.bluebottledesign.com)
+ */
+
+
+
+
+/*~~~~~~~~~~~ Layout ~~~~~~~~~~~*/
+
+
+body {
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #333333;
+	background-color: #F2F2E8;
+}
+
+
+/*~~~~~~~~~~~ Navigation ~~~~~~~~~~~*/
+
+
+.navbar {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #fff;
+	-webkit-box-shadow: 0 1px 5px -1px #333;
+	-moz-box-shadow: 0 1px 5px -1px #333;
+	box-shadow: 0 1px 5px -1px #333;
+	font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 900;
+	color: #E17762;
+  
+}
+
+.navbar-960 {
+	background-color: #fff;
+  
+}
+
+.navbar-brand {
+	text-indent: -9999px;
+	float: left;
+	background-image: url('../images/logo.png');
+	width: 130px;
+	height: 30px;
+	background-size: 130px 30px;  
+	background-repeat: no-repeat;
+	margin: 8px 15px 0 10px;
+	display: block;	
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-text, .navbar-default .navbar-nav > li > a  {
+	color: #E17762;
+	font-size: 110%;
+}
+
+.nav .nav-active {
+	background-color: #f3f3f3;
+}
+
+
+
+
+
+/*~~~~~~~~~~~ Headings ~~~~~~~~~~~*/
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+	font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 900;
+	line-height: 1.1;
+	color: inherit;
+}
+
+h1 {
+	line-height: 1.1875em;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+h2 {
+	font-size: 160%;
+	line-height: 1.3em;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 130%;
+	line-height: 1.3em;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+
+.header-box h2 {
+	font-size: 120%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: -20px;
+	line-height: 1.3em;
+	width: 90%;
+	font-weight: 400;
+}
+
+.hp .orange-box h3 {
+	font-size: 150%;
+}
+
+
+.center {
+	text-align: center;
+}
+
+.fullwidthtop-content h1 {
+	font-size: 31px;
+	padding: 20px 0;
+	text-align: left;
+	width: 100%;
+	margin-bottom: 0;
+}
+
+
+
+
+/* ~~~~~~~~~ Links ~~~~~~~~~ */
+
+
+a {
+	color: #f07057;
+	font-weight: 700;
+}
+
+a:hover {
+	color: #333;
+}
+
+
+
+
+/* ~~~~~~~~~ Layout ~~~~~~~~~ */
+
+
+.fullwidthtop {
+	width: 100%;
+	padding: 30px;
+	margin-top: 51px;
+	margin-bottom: 30px;
+	background-color: #6CBDC4;
+	-webkit-box-shadow: 0 1px 5px -1px #333;
+	-moz-box-shadow: 0 1px 5px -1px #333;
+	box-shadow: 0 1px 5px -1px #333;
+}
+
+.fullwidthtop-content {
+	width: 100%;
+	padding: 0;
+	margin-top: 45px;
+	background-color: #6CBDC4;
+	-webkit-box-shadow: 0 1px 5px -1px #333;
+	-moz-box-shadow: 0 1px 5px -1px #333;
+	box-shadow: 0 1px 5px -1px #333;
+}
+
+.header-box {
+	padding: 0;
+	font-size: 21px;
+	line-height: 2;
+	color: #fff;
+	text-align: center;
+}
+
+
+
+
+
+
+/* ~~~~~~~~~ FlexSlider Wrapper ~~~~~~~~~ */
+
+
+
+.slider-wrapper {
+	width: 100%;
+	overflow: hidden;
+	height: auto;
+	display: inline-block;
+	text-align: center;
+}
+
+ul.slides li {
+	color: #fff;
+	font-family: 'Bitter',serif;
+	font-style: normal;
+	font-weight: 600;
+	font-size: 24px; 
+	line-height: 29px; 
+}
+
+ul.slides li h2 {
+	font-weight: 900;
+	font-size: 30px; /* 26/16*/
+	margin: 0 0 20px 0;
+}
+
+
+
+
+
+/* ~~~~~~~~~ Star Divider ~~~~~~~~~ */
+
+
+.sep {
+	width: 64.583333333333%;
+	margin: 40px auto;
+	height: 20px;
+}
+
+span.star {
+	width: 20px;
+	height: 20px;
+	margin: 0 auto -11px auto;
+	display: block;
+}
+
+span.rule-r {
+	border-bottom: 1px solid #ddd;
+	height: 1px;
+	float: right;
+	width: 46%;
+}
+
+span.rule-l {
+	border-bottom: 1px solid #ddd;
+	height: 1px;
+	float: left;
+	width: 46%;
+}
+
+
+
+
+
+
+/* ~~~~~~~~~ Hover Boxes Orange ~~~~~~~~~ */
+
+a.orange-box {
+	display: block;
+	font-size: 90%;
+	font-weight: 400;
+	background: #f07057;
+	padding: 20px 20px;
+	text-align: center;
+	color: #fff;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: background .35s ease-in-out;
+	-moz-transition: background .35s ease-in-out;
+	-ms-transition: background .35s ease-in-out;
+	-o-transition: background .35s ease-in-out;
+	transition: background .35s ease-in-out;	
+}
+
+a.orange-box:hover {
+	background: #6CBDC4;
+	text-decoration: none;
+}
+
+
+
+
+
+
+
+/* ~~~~~~~~~ Hover Boxes White ~~~~~~~~~ */
+
+
+a.white-box {
+	display: block;
+	background: #fff;
+	padding: 20px;
+	font-weight: 400;
+	text-align: center;
+	color: #333;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: background .35s ease-in-out;
+	-moz-transition: background .35s ease-in-out;
+	-ms-transition: background .35s ease-in-out;
+	-o-transition: background .35s ease-in-out;
+	transition: background .35s ease-in-out;	
+}
+
+a.white-box:hover {
+	text-decoration: none;
+	-webkit-box-shadow: 0 1px 4px 0px #aaa;
+	-moz-box-shadow: 0 1px 4px 0px #aaa;
+	box-shadow: 0 1px 4px 0px #aaa;
+	color: #f07057;
+	text-decoration: none;
+}
+
+
+h5.sep-small {
+	font-family: 'Bitter',serif;
+	font-style: normal;
+	font-size: 2em;
+	font-weight: 100;
+	color: #7f7f7f;
+}
+
+
+
+
+
+
+/* ~~~~~~~~~ Static Boxes White ~~~~~~~~~ */
+
+
+.white-box-content {
+	display: block;
+	background: #fff;
+	padding: 20px;
+	color: #333;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: background .35s ease-in-out;
+	-moz-transition: background .35s ease-in-out;
+	-ms-transition: background .35s ease-in-out;
+	-o-transition: background .35s ease-in-out;
+	transition: background .35s ease-in-out;	
+}
+
+
+
+
+
+
+/* ~~~~~~~~~ Large Orange Button ~~~~~~~~~ */
+
+
+a.large-orange-button {
+	display: block;
+	font-size: 120%;
+	font-weight: 600;
+	background: #f07057;
+	padding: 20px 10px;
+	text-align: center;
+	color: #fff;
+	margin: 30px auto 30px auto;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	-webkit-transition: background .35s ease-in-out;
+	-moz-transition: background .35s ease-in-out;
+	-ms-transition: background .35s ease-in-out;
+	-o-transition: background .35s ease-in-out;
+	transition: background .35s ease-in-out;	
+}
+
+a.large-orange-button:hover {
+	background: #6CBDC4;
+	text-decoration: none;	
+}
+
+
+
+
+
+
+
+/* ~~~~~~~~~ Small Button ~~~~~~~~~ */
+
+
+.btn-primary {
+	font-weight: 600;
+	background: #f07057;
+	border:  #f07057;
+	-webkit-transition: background .35s ease-in-out;
+	-moz-transition: background .35s ease-in-out;
+	-ms-transition: background .35s ease-in-out;
+	-o-transition: background .35s ease-in-out;
+	transition: background .35s ease-in-out;	
+}
+
+.btn-primary:hover {
+	background: #6CBDC4;
+	text-decoration: none;	
+}
+
+
+
+
+/* ~~~~~~~~~ Flex Slider ~~~~~~~~~ */
+
+
+.slides p {
+	font-weight: 400;
+}
+
+
+
+
+
+/* ~~~~~~~~~ Sidebar Menu ~~~~~~~~~ */
+
+.sidebar-menu {
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 0;
+  font-size: 14px;
+  list-style: none;
+  background-color: #F3F3F3;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}
+
+.sidebar-menu .divider {
+  height: 1px;
+  1margin: 9px 0;
+  overflow: hidden;
+  background-color: #e5e5e5;
+}
+
+.sidebar-menu > li > a {
+  display: block;
+  background-color: #ffffff;
+  padding: 12px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.428571429;
+  color: #333333;
+  white-space: nowrap;
+}
+
+.sidebar-header {
+  display: block;
+  background-color: #F3F3F3;
+  padding: 7px 20px 12px 20px;
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Bitter", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+
+
+
+
+/* ~~~~~~~~~ Footer ~~~~~~~~~ */
+
+
+.footer-one {
+	width: 100%;
+	padding: 30px;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	font-size: 21px;
+	text-align: center;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	background-color: #fff;
+}
+
+
+.footer-two {
+	width: 100%;
+	padding: 30px;
+	margin-top: -50px;
+	margin-bottom: -50px;
+	font-size: 15px;
+	color: #fff;
+	text-align: center;
+	border-top: 1px solid #dedede;
+	border-bottom: 1px solid #dedede;
+	background-color: #E17762;
+}
+
+
+
+.social {
+	padding: 60px 0 30px 0;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 1.2em;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ~~~~~~~~~ Mobile Phone Specific CSS ~~~~~~~~~ */
+
+@media screen and (max-width: 450px) {
+
+
+
+
+
+
+img {
+	width: 100%;
+}
+
+
+h1.hp {
+	font-size: 120%;
+}
+
+h2.hp {
+	font-size: 90%;
+}
+
+
+.btn-primary {
+	margin: 0 0 10px 0;
+}
+
+a.orange-box, a.white-box {
+	margin: 0 0 10px 0;
+}
+
+.jumbotron-hp h1 {
+	font-size: 70%;
+}
+
+ .jumbotron-hp h2 {
+	margin-top: -30px;
+	font-size: 70%;
+}
+
+ul.slides li, ul.slides li h2 {
+	font-size: 100%; 
+}
+
+
+
+
+}/* / mobile phone */
+
+
+
+
+
+
+
+
+/* ~~~~~~~~~ iPad Mini Specific CSS ~~~~~~~~~ */
+
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 1)  {
+
+
+.navbar-default .navbar-brand, .navbar-default .navbar-text, .navbar-default .navbar-nav > li > a  {
+	font-size: 90%;
+}
+
+
+a.orange-box, a.white-box {
+	margin: 0 0 10px 0;
+}
+
+.btn-primary {
+	margin: 0 0 10px 0;
+}
+
+
+
+}/* / ipad mini */
