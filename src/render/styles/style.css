@@ -141,6 +141,7 @@ h3 {
 
 /* ~~~~~~~~~ Links ~~~~~~~~~ */
 
+a.anchor{display: block; position: relative; top: -75px; visibility: hidden;}
 
 a {
 	color: #f07057;
@@ -149,6 +150,31 @@ a {
 
 a:hover {
 	color: #333;
+}
+
+.large-a {
+    font-size: 20px;
+}
+
+.benefits{
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+.benefits li {
+    padding: 5px 0px;
+}
+
+.benefits li a {
+    text-decoration: none;
+}
+
+.benefits li a p{
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.5;
+    color: #333333;
 }
 
 
@@ -509,18 +535,24 @@ a.large-orange-button:hover {
 }
 
 
+.highlight{
+    background-color: #f8f8f8 !important;
+}
 
+.src-anno {
+    left: 400px;
+    position: absolute;
+    font-family: serif;
+    font-style: italic;
+    line-height: 19px;
+    font-size: 16px;
+    padding: 33px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.container-img{
+    max-width: 100%;
+    padding: 10px 0px;
+}
 
 
 
@@ -570,7 +602,6 @@ a.orange-box, a.white-box {
 ul.slides li, ul.slides li h2 {
 	font-size: 100%; 
 }
-
 
 
 
