@@ -162,8 +162,6 @@ seneca.use( 'mem-store', {web:{dump:true}} )
     </code>
   </pre>
 
-  <br>
-
   <p>
     The second argument to the use method is an options object containing configuration properties specific to the plugin.
     Refer to the documentation for each plugin to find out how to use them.
@@ -247,8 +245,6 @@ seneca.ready( function( err ) {
     </code>
   </pre>
 
-  <br>
-
   <p>
     You can call ready more than once. If you need to register additional plugins dynamically
     (this is perfectly fine!), you can call ready again to wait for the new plugins to initialize.
@@ -303,8 +299,6 @@ seneca.act( {foo:'bar', zoo:'qaz'}, function( err, out ){
 })
     </code>
   </pre>
-
-  <br>
 
   <p>
     You can define actions at any time, any where. They don't need to be associated with a plugin.

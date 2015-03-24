@@ -36,8 +36,6 @@ isPage: true
         Here's a <a href="http://new.livestream.com/websummit/DeveloperStage2013/videos/33534085" target="_blank">micro-service (video)</a> that generates identifiers. You send the micro-service JSON objects. It responds with a new JSON object.
       </p>
 
-      <br>
-
       <div class="src-anno">
         &larr; load <a href="http://npmjs.org/package/seneca">seneca</a> module, and create instance<br>
         &larr; add a JSON message <span class="anno-em">pattern</span> to match<br>
@@ -62,13 +60,9 @@ require('seneca')()
         </code>
       </pre>
 
-      <br>
-
       <p>
         Here's a client that connects to the identifier generating service (you could also do this manually over HTTP).
       </p>
-
-      <br>
 
       <div class="src-anno">
         <br>
@@ -89,7 +83,6 @@ require('seneca')()
         </code>
       </pre>
 
-      <br>
 
       <p>
         Let's put the logic that generates identifiers into it's own module, and add some features. This is just a normal Node.js module.
@@ -123,13 +116,9 @@ exports.nid = function( args, done ) {
         </code>
       </pre>
 
-      <br>
-
       <p>
         Let's update the identifier service. The service receives JSON objects as messages, and can use <i>pattern matching</i> to decide what to do with them
       </p>
-
-      <br>
 
       <div class="src-anno">
         &larr; load the identifier module (code as above)<br>
@@ -149,13 +138,9 @@ require('seneca')()
         </code>
       </pre>
 
-      <br>
-
       <p>
         You can also call the service directly over HTTP. The default port is 10101. Here's an example:
       </p>
-
-      <br>
 
       <pre>
         <code class="javascript">
@@ -166,8 +151,6 @@ $ curl -d '{"generate":"id","type":"nid"}' http://localhost:10101/act
 {"id":"8vo0n02o"}
         </code>
       </pre>
-
-      <br>
 
       <p>
         The service is exposed via HTTP by default. You can also use other transport mechanisms such as publish/subscribe or queues.

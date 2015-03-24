@@ -81,7 +81,7 @@ isPage: true
         Let's write a plugin that defines one action. The action uses the plugin options argument to build a result.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -95,7 +95,7 @@ var plugin = function( options ) {
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         A plugin is just a function. You can see that there is no callback
@@ -147,7 +147,7 @@ var plugin = function( options ) {
         method to trigger them, like so:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -162,7 +162,7 @@ seneca.act( {foo:'bar'}, console.log )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         This code is available in
@@ -170,7 +170,7 @@ seneca.act( {foo:'bar'}, console.log )
         example, in the <i>simple.js</i> script. Running the script produces:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -179,7 +179,7 @@ null { color: 'pink' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         In the output, the <i>null</i> is the first argument
@@ -202,7 +202,7 @@ null { color: 'pink' }
         at <a href="https://github.com/rjrodger/seneca/tree/master/doc/examples/write-a-plugin" target="_blank">doc/examples/write-a-plugin</a>).
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -224,7 +224,7 @@ this.add( {foo:'bar'}, function( args, done ) {
         The <i>foo.js</i> file is a normal JavaScript file you can load into Node.js with <i>require</i>. It exposes a single function that takes the plugin <i>options</i>. To use the plugin, the code is almost the same as before, except that you pass in the <i>foo.js</i> relative file path in the same way you would for <i>require</i>.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -237,13 +237,13 @@ seneca.act( {foo:'bar'}, console.log )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         The code produces the same output as before:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -252,7 +252,7 @@ null { color: 'pink' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         As well as local files and local modules, you can use public plugin modules
@@ -262,19 +262,19 @@ null { color: 'pink' }
         to the <i>role:echo</i> pattern. First, <i>npm install</i> it:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">$ npm install seneca-echo</code>
       </pre>
 
-      <br>
+
 
       <p>
         Then use it:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -287,13 +287,13 @@ seneca.act( {role:'echo', foo:'bar'}, console.log )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Running <i>echo.js</i> produces:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -302,7 +302,7 @@ null { foo: 'bar' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         You aren't using any options in this example. The <i>seneca-echo</i>
@@ -324,13 +324,13 @@ null { foo: 'bar' }
         providing the "echo" part of the name:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">seneca.use( 'echo' )</code>
       </pre>
 
-      <br>
+
 
       <small style="float:right"><a href="#wp-contents">[top]</a></small>
       <a name="wp-name"><p><b>Give Your Plugin a Name</b></p></a>
@@ -341,7 +341,7 @@ null { foo: 'bar' }
         you can see what your plugin is doing. Let's try it!
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -363,13 +363,13 @@ seneca.act( {foo:'bar'}, console.log )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         And then run it like so:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -380,7 +380,7 @@ null { color: 'pink' }
         </code>
       </pre>
 
-      <br>
+
 
       </p>
       This uses Seneca's log filtering feature to focus on the log lines
@@ -393,7 +393,7 @@ null { color: 'pink' }
         when registering their names. Try this:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -405,7 +405,7 @@ null { foo: 'bar' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         You may have noticed something interesting. There were three lines of
@@ -417,7 +417,7 @@ null { foo: 'bar' }
         give the defining function a name:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -437,13 +437,13 @@ seneca.act( {foo:'bar'}, console.log )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Running this gives:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -455,7 +455,7 @@ null { color: 'pink' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         When you load a plugin as a module then the module reference, as
@@ -464,7 +464,7 @@ null { color: 'pink' }
         Here's the <i>foo.js</i> plugin again:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -476,7 +476,7 @@ null { color: 'pink' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         There's an obvious risk that you might have a naming conflict. Seneca
@@ -518,7 +518,7 @@ null { color: 'pink' }
         example:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -531,7 +531,7 @@ var plugin = function trinity( options ) {
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Many of the public Seneca plugins on NPM follow this pattern. You may
@@ -557,7 +557,7 @@ var plugin = function trinity( options ) {
         defined depending on the options provided.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -573,7 +573,7 @@ module.exports = function( options ) {
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         You can access the tag value from the context property of the plugin
@@ -588,7 +588,7 @@ module.exports = function( options ) {
         tag, to the plugin module reference. Here's the example code:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -603,13 +603,13 @@ seneca.act( {foo:'bar',zed:2}, console.log )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Running this code produces the output:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -619,13 +619,13 @@ null { color: 'green', tag: 'BBB' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Using the debug log shows the different instances of the plugin in action:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -641,13 +641,13 @@ null { color: 'green', tag: 'BBB' }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         To isolate a tag, use these log settings:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -660,7 +660,7 @@ null { color: 'green', tag: 'BBB' }
         </code>
       </pre>
 
-      <br>
+
 
       <small style="float:right"><a href="#wp-contents">[top]</a></small>
       <a name="wp-options"><p><b>Dealing with Options</b></p></a>
@@ -674,7 +674,7 @@ null { color: 'green', tag: 'BBB' }
         except that it can handle properties at any level. For example:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -702,7 +702,7 @@ console.log(bar)
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         The property <code>colors.red</code> is overridden, but the other colors retain
@@ -714,7 +714,7 @@ console.log(bar)
         the <i>foo.js</i> module (as above).
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -743,7 +743,7 @@ module.exports = function( options ) {
         </code>
       </pre>
 
-      <br>
+
 
       <p><small>
         (As an aside, note that you can also specify the name of the
@@ -757,7 +757,7 @@ module.exports = function( options ) {
         options. Let's supply some user options that will override the defaults:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -775,13 +775,13 @@ seneca.act( {foo:'bar'}, console.log )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         This code runs the <i>foo:bar</i> action, which produces:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -790,7 +790,7 @@ null { color: 'pink', box_width: 50, box_height: 200 }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         The default values for <code>color</code> and <code>box.width</code> (<i>red</i> and <i>100</i>, respectively), have been overridden by the options provided as the second argument to <code>seneca.use</code> when the plugin is loaded (<i>pink</i> and <i>50</i>).
@@ -800,7 +800,7 @@ null { color: 'pink', box_width: 50, box_height: 200 }
         You can load plugin options from configuration files. Seneca looks for a file named <i>seneca.options.js</i> in the current folder, and <i>requires</i> the file if it exists. This file should be a Node.js module that exports a JSON object. For example:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -818,7 +818,7 @@ module.exports = {
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         You can specify global Seneca options in this file, and you can
@@ -834,7 +834,7 @@ module.exports = {
         options provided to the plugin by Seneca.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -849,13 +849,13 @@ seneca.use( zed )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         As the example <i>seneca.options.js</i> file defines a <i>zed</i> property, this is used to provide options to the <i>zed</i> plugin. Running the <i>zed.js</i> script prints out the options loaded from <i>seneca.options.js</i>:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -864,13 +864,13 @@ zed undefined { red: 50, green: 100, blue: 150 }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         If you are using tags to create multiple instances of the same plugin, you can use the <i>$suffix</i> convention to specify options particular to a given tagged plugin instance. The <i>zed-tag.js</i> script is the same as the <i>zed.js</i> script, except that it also creates an additional tagged instance of the <i>zed</i> plugin. Note that the definition of the plugin uses a properties object, with the <code>init</code> property specifying the plugin definition function.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -886,13 +886,13 @@ seneca.use( {init:zed, name:'zed', tag:'tag0'} )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         The <i>seneca.options.js</i> file also defines a <i>zed$tag0</i> property, and the options for the <i>tag0</i> instance of the <i>zed</i> plugin are taken from this. However, if you run the code, you'll notice that it also picks up the options defined for the main <i>zed</i> plugin. These become base defaults, so that the special case option, <code>red: 55</code> overrides the main value.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -902,7 +902,7 @@ zed tag0       { red: 55, green: 100, blue: 150 }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Sometimes you need to access to all the options provided to Seneca. For
@@ -915,7 +915,7 @@ zed tag0       { red: 55, green: 100, blue: 150 }
         to get back an object containing the entire Seneca options tree:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -930,13 +930,13 @@ seneca.use( zed )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Running this script produces:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -951,13 +951,13 @@ $ node zed-access.js
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         You are not required to use the <i>seneca.options.js</i> file. If it exists, it will be loaded and used as the base default for options. You can specify your own configuration file (or an object containing option values), by providing an argument to <code>seneca.options()</code>. This is useful for different deployment scenarios. For example, the file <i>dev.options.js</i> defines a custom configuration for the <i>zed</i> plugin:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -970,13 +970,13 @@ module.exports = {
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         The <i>zed-dev.js</i> script uses this options file, but also gets the default options from <i>seneca.options.js</i>:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -991,13 +991,13 @@ seneca.use( zed )
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         And the output has the overridden value for the <code>green</code> option.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -1006,14 +1006,14 @@ zed undefined { red: 50, green: 110, blue: 150 }
         </code>
       </pre>
 
-      <br>
+
 
 
       <p>
         Finally, you can specify options on the command line, either via an argument, or an evironment variable. Here are some examples using the <i>zed-dev.js</i> script. Use the <code>--seneca.options</code> command line argument to provide option values. You can use "dot notation" to specify nested options, and you can specify multiple options:
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -1022,13 +1022,13 @@ zed undefined { red: 10, green: 110, blue: 200 }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Alternatively, you can use the environment variable <code>SENECA_OPTIONS</code> to specify options that will be merged into the base defaults (using <code>seneca.util.deepextend</code>). The format is <a href="https://github.com/rjrodger/jsonic" target="_blank">jsonic</a>, a lenient, abbreviated, fully compatible version of JSON for lazy developers.
       </p>
 
-      <br>
+
 
       <pre>
         <code class="javascript">
@@ -1037,7 +1037,7 @@ zed undefined { red: 10, green: 110, blue: 200 }
         </code>
       </pre>
 
-      <br>
+
 
       <p>
         Command line options always override options from other sources. Here is the order of priority, from highest to lowest:

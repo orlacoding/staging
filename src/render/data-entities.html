@@ -64,16 +64,12 @@ isPage: true
         For example:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">
 seneca.act( {role:'entity', cmd:'save', ent:{...}},
             function(err,result){ ... } )
         </code>
       </pre>
-
-      <br>
 
       <p>
         This action will save data entities to persistent storage, as part of the group of actions that perform the
@@ -101,23 +97,15 @@ seneca.act( {role:'entity', cmd:'save', ent:{...}},
         First you need a Seneca instance:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">var seneca = require('seneca')()</code>
       </pre>
 
-      <br>
-
       <p>Then you can create data entity objects:</p>
-
-      <br>
 
       <pre>
         <code class="javascript">var foo = seneca.make('foo')</code>
       </pre>
-
-      <br>
 
       <p>
         The entity name is <i>foo</i>. If your underlying data store is
@@ -130,8 +118,6 @@ seneca.act( {role:'entity', cmd:'save', ent:{...}},
         Next, add some data fields:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">
 foo.name = 'Apple'
@@ -139,13 +125,10 @@ foo.price = 1.99
         </code>
       </pre>
 
-      <br>
-
       <p>The data fields are just ordinary JavaScript object properties.</p>
 
       <p>Now, you need to save the data:</p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -154,8 +137,6 @@ foo.save$(function(err,foo){
 })
         </code>
       </pre>
-
-      <br>
 
       <p>
         The <code>save$</code> method invokes the <i>role:entity, cmd:save</i>
@@ -182,7 +163,6 @@ foo.save$(function(err,foo){
         the <i>id</i> property.
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -194,7 +174,6 @@ foo_entity.load$( id, function(err,foo){
         </code>
       </pre>
 
-      <br>
 
       <p>
         You can call the <code>load$</code> method on any data entity object
@@ -206,7 +185,6 @@ foo_entity.load$( id, function(err,foo){
         <code>remove$</code> method:
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -216,14 +194,11 @@ foo_entity.remove$( id, function(err){ ... })
         </code>
       </pre>
 
-      <br>
 
       <p>
         To get a list of entities that match a query, use
         the <code>list$</code> method:
       </p>
-
-      <br>
 
       <pre>
         <code class="javascript">
@@ -236,7 +211,6 @@ foo_entity.list$( {price:1.99}, function(err,list){
         </code>
       </pre>
 
-      <br>
 
       <p>
         The matching entities are returned as an array. The query is a set of
@@ -251,7 +225,6 @@ foo_entity.list$( {price:1.99}, function(err,list){
         One thing you can do is sort the results:
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -261,7 +234,6 @@ foo_entity.list$( {price:1.99, sort$:{price:-1}}, function(err,list){
         </code>
       </pre>
 
-      <br>
 
       <p>
         The <code>sort$</code> meta argument takes a sub-object containing a single key, the field to sort. The value <code>+1</code> means sort ascending,
@@ -302,13 +274,10 @@ foo_entity.list$( {price:1.99, sort$:{price:-1}}, function(err,list){
         Here's an example of creating a <i>foo</i> entity (as seen above):
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">var foo_entity = seneca.make('foo')</code>
       </pre>
 
-      <br>
 
       <p>
         Often, a set of plugins that provide the related functions, will use
@@ -323,7 +292,6 @@ foo_entity.list$( {price:1.99, sort$:{price:-1}}, function(err,list){
         and work with the following entities:
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -332,7 +300,6 @@ var sys_login = seneca.make('sys','login')
         </code>
       </pre>
 
-      <br>
 
       <p>
         The underlying database needs to have a name for the table or
@@ -373,8 +340,6 @@ var sys_login = seneca.make('sys','login')
         The <i>make</i> method is available on both the main Seneca object, and on each entity object (where it always has a $ suffix):
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">
 // the alias make$ will also work
@@ -385,13 +350,10 @@ var bar = foo.make$('bar')
         </code>
       </pre>
 
-      <br>
 
       <p>
         It optionally accepts up to three string arguments, specifying the zone, base and name, always in that order:
       </p>
-
-      <br>
 
       <pre>
         <code class="javascript">
@@ -401,13 +363,11 @@ var zen_bar_foo = seneca.make('zen','bar','foo')
         </code>
       </pre>
 
-      <br>
 
       <p>
         When no arguments are given, calling <code>make$</code> on an entity will create a new instance of the same kind (same zone, base and name):
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -416,14 +376,12 @@ var morefoo = foo.make$()
         </code>
       </pre>
 
-      <br>
 
       <p>
         No data is copied, you get a completely new, empty, data entity (use <code>clone$</code> instead to copy the data).
         If you pass in an object as the last argument to <code>make$</code>, it will be used to initialize the entity data fields:
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -432,31 +390,23 @@ console.log('price is '+foo.price+' and color is '+foo.color)
         </code>
       </pre>
 
-      <br>
 
       <p>
         If you call the <code>toString</code> method on an entity, it will indicate the zone, base and name using the syntax <i>zone/base/name</i> as a prefix to the entity data:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">$zone/base/name:{id=...;prop=val,...}</code>
       </pre>
-
-      <br>
 
       <p>
         If any of the namespace elements are not defined, a minus <code>'-'</code> is used as placeholder:
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">$-/-/name:{id=...;prop=val,...}</code>
       </pre>
-
-      <br>
 
       <p>
         The syntax <i>zone/base/name</i> is also used a shorthand for an
@@ -487,8 +437,6 @@ console.log('price is '+foo.price+' and color is '+foo.color)
         Using a data store plugin is easy. Register with Seneca and supply the database connection details as options to the plugin:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">
 var seneca = require('seneca')()
@@ -500,15 +448,12 @@ seneca.use('mongo-store',{
         </code>
       </pre>
 
-      <br>
 
       <p>
         The database connection will need to be established before you can
         save data. Use the <code>seneca.ready</code> function to supply a
         callback that will be called once the database is good to go:
       </p>
-
-      <br>
 
       <pre>
         <code class="javascript">
@@ -524,8 +469,6 @@ apple.save$(function(err,apple){
         </code>
       </pre>
 
-      <br>
-
       <p>
         The <code>seneca.ready</code> function works for any plugin that has a callback dependency
         like this - it will only be triggered once all the plugins are ready.
@@ -535,8 +478,6 @@ apple.save$(function(err,apple){
         To close any open database connections, use the <code>seneca.close</code> method:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">
 seneca.close(function(err){
@@ -545,21 +486,15 @@ seneca.close(function(err){
         </code>
       </pre>
 
-      <br>
-
       <h5>Data Store Plugins</h5>
 
       <p>
         To use a data store plugin, you'll normally need to install the module via npm:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">npm install seneca-mongo-store</code>
       </pre>
-
-      <br>
 
       <p>
         The data store plugins use a naming convention of the form seneca-<i>database</i>-store. The suffix <i>db</i> is dropped. Here are some of the existing data store plugins:
@@ -577,13 +512,11 @@ seneca.close(function(err){
         Refer to their project pages for details on behaviour and configuration options. As a convenience, Seneca allows you to drop the <i>seneca-</i> prefix when registering the plugin:
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">seneca.use('mongo-store',{ ... })</code>
       </pre>
 
-      <br>
 
       <p>
         The default, built-in data store is <i>mem-store</i>, which provides a
@@ -627,7 +560,6 @@ seneca.close(function(err){
         regardless of zone or base, will use the transient <i>mem-store</i>:
       </p>
 
-      <br>
 
       <pre>
         <code class="javascript">
@@ -637,13 +569,10 @@ seneca.use('mem-store',{ map:{
         </code>
       </pre>
 
-      <br>
 
       <p>
         To use different databases for different groups of data, use the <i>base</i> element:
       </p>
-
-      <br>
 
       <pre>
         <code class="javascript">
@@ -657,8 +586,6 @@ seneca.use('level-store',{
         </code>
       </pre>
 
-      <br>
-
       <p>
         This mapping sends -/json/- entities to
         the <a href="https://github.com/rjrodger/seneca-jsonfile-store" target="_blank">jsonfile</a>
@@ -669,8 +596,6 @@ seneca.use('level-store',{
 
       <p>
         Here it is in action:
-
-        <br>
 
       <pre>
         <code class="javascript">
@@ -690,8 +615,6 @@ seneca.ready(function(err,seneca){
 })
         </code>
       </pre>
-
-      <br>
 
       <p>
         The full source code is available in the data-entities folder of the <a href="https://github.com/rjrodger/seneca-examples" target="_blank">seneca examples repository</a>.
@@ -714,8 +637,6 @@ seneca.ready(function(err,seneca){
         For example, run the example above, that uses both the jsonfile store and the leveldb store, using the <code>--seneca.log=type:act</code> log filter, and you get the output:
       </p>
 
-      <br>
-
       <pre>
         <code class="javascript">
 $ node main.js --seneca.log=type:act
@@ -728,8 +649,6 @@ $ node main.js --seneca.log=type:act
 ...
         </code>
       </pre>
-
-      <br>
 
       <p>
         This shows the <i>role:entity, cmd:save</i> action of both data
@@ -747,8 +666,6 @@ $ node main.js --seneca.log=type:act
       <p>
         The data stores themselves also generate logging output. Try <code>--seneca.log=type:plugin</code> to see this:
       </p>
-
-      <br>
 
       <pre>
         <code class="javascript">
