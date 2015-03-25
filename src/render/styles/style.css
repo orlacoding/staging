@@ -190,6 +190,14 @@ pre{
     margin-bottom: 20px;
 }
 
+.contribs{
+    list-style-type: none;
+}
+
+.contribs li{
+    margin:5px 0px;
+}
+
 
 
 
