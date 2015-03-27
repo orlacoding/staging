@@ -1,0 +1,491 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Seneca, a Micro-Services toolkit for Node.js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link  rel="stylesheet" href="/staging/styles/bootstrap.css" />
+	<link  rel="stylesheet" href="/staging/styles/font-awesome/css/font-awesome.css" />
+	<link  rel="stylesheet" href="/staging/styles/style.css" />
+	<link  rel="stylesheet" href="/staging/styles/flexslider.css" />
+
+	<link  rel="stylesheet" href="/staging/styles/github.css" />
+
+	<!-- GOOGLE WEB FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="scripts/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<script defer="defer"  src="/staging/vendor/jquery.js"></script><script defer="defer"  src="/staging/vendor/bootstrap.js"></script>
+	<script defer="defer"  src="/staging/scripts/menu.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+	<div class="navbar-960">
+
+		<!-- START TOP NAVBAR -->
+
+
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">Seneca</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav top-nav">
+
+				<input type="hidden" class="selected-menu-item" value="" />
+
+				<li id="index">
+					<a href="index.html"><i class="fa fa-home"></i></a>
+				</li>
+				<li id="getting-started">
+					<a href="getting-started.html" onload="">Get Started</a>
+				</li>
+				<li id="documentation">
+					<a href="documentation.html">Documentation</a>
+				</li>
+				<!--<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Dropdowns<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="index.html">Home Page</a>
+						</li>
+						<li>
+							<a href="content.html">Content Page</a>
+						</li>
+						<li>
+							<a href="content-leftmenu.html">Content Page - Left Sub Menu</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="content.html">Content Page</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="content-leftmenu.html">Content Page - Left Sub Menu</a>
+						</li>
+					</ul>
+				</li>-->
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-life-ring"></i> Support<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="https://github.com/rjrodger/seneca">Source Code (GitHub)</a>
+						</li>
+						<li>
+							<a href="https://github.com/rjrodger/seneca/issues">Bugs! Defects! Breakage!</a>
+						</li>
+						<li>
+							<a href="https://groups.google.com/forum/#!forum/seneca-micro-services">Google Group</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="https://twitter.com/senecajs">@senecajs</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</nav>
+
+
+<!-- END TOP NAVBAR -->
+
+<div class="fullwidthtop-content">
+  <div class="col-md-12 column">
+
+    <div class="header-box">
+      <h1>What is Seneca?</h1>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CONTAINER STARTS HERE -->
+
+
+<div class="container">
+
+
+
+
+  <h2>Built it Now, Scale it Later!</h2>
+
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <p>
+        This toolkit lets you write clean code that you can scale without needing to refactor. Start with everything in one process, and split it all out onto multiple systems when you need to.
+      </p>
+
+      <p>
+        Here's a <a href="http://new.livestream.com/websummit/DeveloperStage2013/videos/33534085" target="_blank">micro-service (video)</a> that generates identifiers. You send the micro-service JSON objects. It responds with a new JSON object.
+      </p>
+
+      <div class="src-anno">
+        &larr; load <a href="http://npmjs.org/package/seneca">seneca</a> module, and create instance<br>
+        &larr; add a JSON message <span class="anno-em">pattern</span> to match<br>
+        &larr; the pattern is <span class="anno-em anno-code">{...,"generate":"id",...}</span><br>
+        &larr; the <span class="anno-em">action</span> function for the pattern,<br>
+        &larr; <span class="anno-em">done</span> is a regular callback function<br>
+        &larr; send back another JSON message as the result,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;which is <span class="anno-em anno-code">{"id":"0.123456789"}</span><br>
+        &larr; listen for messages (HTTP is the default)
+      </div>
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-built_in">require</span>(<span class="hljs-string">'seneca'</span>)()
+  .add(
+        { generate:<span class="hljs-string">'id'</span>},
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( message, done )</span> </span>{
+          done( <span class="hljs-literal">null</span>,
+                {id:<span class="hljs-string">''</span>+<span class="hljs-built_in">Math</span>.random()} )
+        })
+  .listen()
+
+        </code></pre>
+      
+
+      <p>
+        Here's a client that connects to the identifier generating service (you could also do this manually over HTTP).
+      </p>
+
+      <div class="src-anno">
+        <br>
+        &larr; become a client<br>
+        &larr; send a message: <span class="anno-em anno-code">{"generate":"id"}</span><br>
+        &larr; the result arrives via a callback function<br>
+        &larr; print out the result: <span class="anno-em anno-code">{"id":"0.123456789"}</span><br>
+      </div>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-built_in">require</span>(<span class="hljs-string">'seneca'</span>)()
+  .client()
+  .act( { generate:<span class="hljs-string">'id'</span> },
+        <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( err, result )</span> </span>{
+          <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">JSON</span>.stringify(result))
+        })
+        </code></pre>
+      
+
+
+      <p>
+        Let's put the logic that generates identifiers into it's own module, and add some features. This is just a normal Node.js module.
+      </p>
+
+      <div class="src-anno">
+        &larr; the <a href="http://github.com/rjrodger/nid">nid</a> module generates <i>polite</i> identifiers<br>
+        <br>
+        &larr; export a function for random identifiers<br>
+        <br>
+        <br>
+        <br>
+        &uarr; this time, generate formatted identifiers<br>
+        <br>
+        &larr; export a function for nid-style identifiers<br>
+      </div>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-keyword">var</span> nid = <span class="hljs-built_in">require</span>(<span class="hljs-string">'nid'</span>)
+
+exports.random = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( args, done )</span> </span>{
+  <span class="hljs-keyword">var</span> len = args.len || <span class="hljs-number">8</span>
+  done( <span class="hljs-literal">null</span>,
+        {id: (<span class="hljs-string">''</span>+(<span class="hljs-built_in">Math</span>.pow(<span class="hljs-number">10</span>,len)*<span class="hljs-built_in">Math</span>.abs(<span class="hljs-built_in">Math</span>.random()))).substring(<span class="hljs-number">0</span>,len)} )
+  }
+
+exports.nid = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( args, done )</span> </span>{
+  done( <span class="hljs-literal">null</span>, {id: nid( args.len || <span class="hljs-number">8</span> )} )
+}
+        </code></pre>
+      
+
+      <p>
+        Let's update the identifier service. The service receives JSON objects as messages, and can use <i>pattern matching</i> to decide what to do with them
+      </p>
+
+      <div class="src-anno">
+        &larr; load the identifier module (code as above)<br>
+        <br>
+        <br>
+        &larr; add the patterns to match,<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and the actions to execute
+      </div>
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-keyword">var</span> id = <span class="hljs-built_in">require</span>(<span class="hljs-string">'./id-module'</span>);
+
+<span class="hljs-built_in">require</span>(<span class="hljs-string">'seneca'</span>)()
+  .add( { generate:<span class="hljs-string">'id'</span>}, id.random )
+  .add( { generate:<span class="hljs-string">'id'</span>, type:<span class="hljs-string">'nid'</span>}, id.nid )
+  .listen()
+        </code></pre>
+      
+
+      <p>
+        You can also call the service directly over HTTP. The default port is 10101. Here's an example:
+      </p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+$ curl -d <span class="hljs-string">'{"generate":"id"}'</span> http:<span class="hljs-comment">//localhost:10101/act</span>
+{<span class="hljs-string">"id"</span>:<span class="hljs-string">"28375388"</span>}
+
+$ curl -d <span class="hljs-string">'{"generate":"id","type":"nid"}'</span> http:<span class="hljs-comment">//localhost:10101/act</span>
+{<span class="hljs-string">"id"</span>:<span class="hljs-string">"8vo0n02o"</span>}
+        </code></pre>
+      
+
+      <p>
+        The service is exposed via HTTP by default. You can also use other transport mechanisms such as publish/subscribe or queues.
+      </p>
+
+      <p>
+        The pattern matching on the content of the message means you can easily extend and enhance the service.
+        You can also use patterns to split services into smaller pieces as the system grows.
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+  <div style="clear:both;"></div>
+
+  <a name=""></a>
+
+  <div class="sep">
+    <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+    <span class="rule-l">&nbsp;</span>
+    <span class="rule-r">&nbsp;</span>
+  </div>
+
+
+
+
+  <h2>Why Should I Use Seneca?</h2>
+
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+
+      <br>
+
+      <p>
+        <a href="#benefit-organized">Get Your Code Organized</a><br>
+        Where is the code that does X? Seneca makes it obvious.
+      </p>
+
+      <p>
+        <a href="#benefit-b">Quickly Build Minimum Viable Products</a><br>
+        There are lots of plugins that give you things like user accounts, payments, social media, back office admin, all that good stuff.
+      </p>
+
+      <p>
+        <a href="#benefit-c">Write Micro-Services</a><br>
+        Easily break everything into little pieces, and deliver them any way you like, even using <i>other languages</i> (gasp).
+      </p>
+
+      <p>
+        <a href="#benefit-d">Why Scale Today When You Can Scale Tomorrow?</a><br>
+        Forgot to add a caching layer? Need to refactor technical debt? No you dont.
+      </p>
+
+      <p>
+        <a href="#benefit-e">Enhance, Extend, Evolve</a><br>
+        Standard plugins not doing it for you? Bending them to your will does not require API grokking.
+      </p>
+
+      <p>
+        <a href="#benefit-f">Light Touch Integration</a><br>
+        Got your own architecture? Fond of a framework? Not a problem, Seneca does not want to take over the world.
+      </p>
+
+      <p>
+        <a href="#benefit-g">Mix and Match Databases and Other Services</a><br>
+        Need Mongo for user profiles, Postgres for purchases, and Redis for sessions? All in the same data model? Got it covered.
+      </p>
+
+    </div>
+  </div>
+
+  <div style="clear: both;"></div>
+
+  <div class="sep">
+    <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+    <span class="rule-l">&nbsp;</span>
+    <span class="rule-r">&nbsp;</span>
+  </div>
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <br>
+
+      <a name="benefit-organized"></a>
+      <h3>Get Your Code Organized</h3>
+
+      <p>
+        Seneca organizes your code into <i>actions</i> that are triggered
+        by <i>patterns</i>.  Patterns are not at the same fine-grained
+        level as traditional API methods. Patterns are
+        coarsed-grained. They correspond much more closely to the business
+        use-cases that your system has to offer as features.
+      </p>
+
+      <p>
+        This means you can think about your system in a much more natural style, right from the start.
+        Let's say you're building a simple e-commerce website. What are the use cases?
+
+        <br>
+
+        <img class="container-img" src="images/cart-use-cases.jpg">
+
+        <br>
+
+        Define a set of patterns for these use cases:
+        <ul>
+          <li><code>{case:"list", what:"product"}</code></li>
+          <li><code>{case:"show", what:"product"}</code></li>
+          <li><code>{case:"cart-add"}</code></li>
+          <li><code>{case:"cart-remove"}</code></li>
+          <li><code>{case:"checkout"}</code></li>
+        </ul>
+        Then you can send these messages to "get stuff done":
+        <ul>
+          <li><code>{<b>case:"list", what:"product"</b>}</code></li>
+          <li><code>{<b>case:"show", what:"product"</b>, <i>id:"1234"</i>}</code></li>
+          <li><code>{<b>case:"cart-add"</b>, <i>product:"1234", cart:"5678"</i>}</code></li>
+          <li><code>{<b>case:"cart-remove"</b>, <i>product:"1234", cart:"5678"</i>}</code></li>
+          <li><code>{<b>case:"checkout"</b>, <i>cart:"5678"</i>}</code></li>
+        </ul>
+      </p>
+
+      <p>
+        Now, let's say you need to customize the business logic. For
+        example, if you spend more than $50, you get a discount.  You can
+        easily see that a good place to add this code is in
+        the <code>{case:"cart-add"}</code> pattern. When you add a new
+        product to the cart, check the total, and add a discount line item
+        to the cart if the total is over $50.
+      </p>
+
+      <br>
+
+      <h4>Testing</h4>
+
+      <p>
+        Writing tests also becomes easier. You just need to specify a list
+        of inbound JSON messages, and check that you get the right JSON
+        result back for each one. You are testing at a higher level than
+        unit tests, which means your tests are less fragile. They will tend
+        to break only when you change the actual feature, rather than when
+        you refactor.
+      </p>
+    </div>
+  </div>
+
+  <div style="clear:both;"></div>
+
+  <a name=""></a>
+
+  <div class="sep">
+    <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+    <span class="rule-l">&nbsp;</span>
+    <span class="rule-r">&nbsp;</span>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+<!-- END OF CONTAINER -->
+
+
+
+<footer>
+
+
+
+	<div class="footer-one">
+		<div class="col-md-12 column">
+
+
+			<div class="footer-logo">
+				<img src="images/logo-footer.png" alt="Seneca" title="Seneca">
+			</div>
+
+
+
+
+			<div class="row clearfix social">
+
+				<div class="col-md-4 column">
+					<p><a href="http://github.com/rjrodger/seneca"><i class="fa fa-github fa-2x"></i> Github</a></p>
+				</div>
+
+				<div class="col-md-4 column">
+					<p><a href="http://twitter.com/nodeseneca"><i class="fa fa-twitter fa-2x"></i> Twitter</a></p>
+				</div>
+
+				<div class="col-md-4 column">
+					<p><a href="http://senecajs.org/videos.html"><i class="fa fa-play-circle fa-2x"></i> Videos</a></p>
+				</div>
+
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+	<div class="footer-two">
+
+		© Seneca 2014 All Rights Reserved.
+
+	</div>
+
+</footer>
+
+<!-- FLEXSLIDER JAVASCRIPT CONTROLS -->
+
+<script defer="defer"  src="/staging/vendor/jquery_002.js"></script><script defer="defer"  src="/staging/scripts/scripts.js"></script>
+
+</body>
+</html>

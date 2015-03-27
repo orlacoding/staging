@@ -1,0 +1,528 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Seneca, a Micro-Services toolkit for Node.js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link  rel="stylesheet" href="/staging/styles/bootstrap.css" />
+	<link  rel="stylesheet" href="/staging/styles/font-awesome/css/font-awesome.css" />
+	<link  rel="stylesheet" href="/staging/styles/style.css" />
+	<link  rel="stylesheet" href="/staging/styles/flexslider.css" />
+
+	<link  rel="stylesheet" href="/staging/styles/github.css" />
+
+	<!-- GOOGLE WEB FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="scripts/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<script defer="defer"  src="/staging/vendor/jquery.js"></script><script defer="defer"  src="/staging/vendor/bootstrap.js"></script>
+	<script defer="defer"  src="/staging/scripts/menu.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+	<div class="navbar-960">
+
+		<!-- START TOP NAVBAR -->
+
+
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">Seneca</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav top-nav">
+
+				<input type="hidden" class="selected-menu-item" value="getting-started" />
+
+				<li id="index">
+					<a href="index.html"><i class="fa fa-home"></i></a>
+				</li>
+				<li id="getting-started">
+					<a href="getting-started.html" onload="">Get Started</a>
+				</li>
+				<li id="documentation">
+					<a href="documentation.html">Documentation</a>
+				</li>
+				<!--<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Dropdowns<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="index.html">Home Page</a>
+						</li>
+						<li>
+							<a href="content.html">Content Page</a>
+						</li>
+						<li>
+							<a href="content-leftmenu.html">Content Page - Left Sub Menu</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="content.html">Content Page</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="content-leftmenu.html">Content Page - Left Sub Menu</a>
+						</li>
+					</ul>
+				</li>-->
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-life-ring"></i> Support<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="https://github.com/rjrodger/seneca">Source Code (GitHub)</a>
+						</li>
+						<li>
+							<a href="https://github.com/rjrodger/seneca/issues">Bugs! Defects! Breakage!</a>
+						</li>
+						<li>
+							<a href="https://groups.google.com/forum/#!forum/seneca-micro-services">Google Group</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="https://twitter.com/senecajs">@senecajs</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</nav>
+
+
+<!-- END TOP NAVBAR -->
+
+<div class="fullwidthtop-content">
+  <div class="col-md-12 column">
+
+    <div class="header-box">
+      <h1>Getting Started</h1>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- CONTAINER STARTS HERE -->
+
+
+<div class="container">
+
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <br> <br>
+      <p>
+        This toolkit lets you focus on the real, "business" code of your app. Instead of worrying about which database to use, how to structure your components, or how to manage dependencies, you can just start coding.
+      </p>
+      <p>
+        You write everything as a command. Your commands get called whenever they match a set of properties. Your calling code doesn't know, or care, which command gets the work done. A JavaScript object goes in, and one comes out, asynchronously.
+      </p>
+      <p>
+        For practical details, visit the <a href="https://github.com/rjrodger/seneca" target="_blank">Seneca github project page</a>.
+      </p>
+      <p>
+        Here's a command that sums two numbers:
+      </p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-keyword">var</span> seneca = <span class="hljs-built_in">require</span>(<span class="hljs-string">'seneca'</span>)()
+
+seneca.add( {role:<span class="hljs-string">'math'</span>, cmd:<span class="hljs-string">'sum'</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(args,callback)</span> </span>{
+  <span class="hljs-keyword">var</span> sum = args.left + args.right
+  callback(<span class="hljs-literal">null</span>,{answer:sum})
+})
+
+seneca.act( {role:<span class="hljs-string">'math'</span>, cmd:<span class="hljs-string">'sum'</span>, left:<span class="hljs-number">1</span>, right:<span class="hljs-number">2</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(err,result)</span> </span>{
+  <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+  <span class="hljs-built_in">console</span>.log(result)
+})
+        </code></pre>
+      
+
+      <p><code>seneca.add</code> adds a new command. <code>seneca.act</code> acts on the provided pattern, running a command if it matches. Try the code:</p>
+
+      
+        <pre class="highlight"><code class="hljs bash">
+$ node example.js
+{ answer: <span class="hljs-number">3</span> }
+        </code></pre>
+      
+
+      <p>
+        You registered the pattern <code>{role:'math', cmd:'sum'}</code>. The input matched, and your code ran. The <code>left</code> and <code>right</code> arguments were then used by your plugin to do some real work.
+      </p>
+
+      <p>Let's add another command:</p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+seneca.add( {role:<span class="hljs-string">'math'</span>, cmd:<span class="hljs-string">'product'</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(args,callback)</span> </span>{
+  <span class="hljs-keyword">var</span> product = args.left * args.right
+  callback(<span class="hljs-literal">null</span>,{answer:product})
+})
+
+seneca.act( {role:<span class="hljs-string">'math'</span>, cmd:<span class="hljs-string">'product'</span>, left:<span class="hljs-number">3</span>, right:<span class="hljs-number">4</span>},
+          <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(err,result)</span> </span>{
+          <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+          <span class="hljs-built_in">console</span>.log(result)
+          })
+        </code></pre>
+      
+
+      
+        <pre class="highlight"><code class="hljs bash">
+$ node example.js
+{ answer: <span class="hljs-number">3</span> }
+{ answer: <span class="hljs-number">12</span> }
+        </code></pre>
+      
+
+      <p>You can add new commands whenever you like, wherever you like.</p>
+
+      <br>
+
+      <p>This named argument style is fun, but if you want a real API, you can have that too:</p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">print</span><span class="hljs-params">(err,result)</span> </span>{<span class="hljs-built_in">console</span>.log(result)}
+
+<span class="hljs-keyword">var</span> math = seneca.pin({role:<span class="hljs-string">'math'</span>,cmd:<span class="hljs-string">'*'</span>})
+math.sum( {left:<span class="hljs-number">1</span>,right:<span class="hljs-number">2</span>}, print )
+math.product( {left:<span class="hljs-number">1</span>,right:<span class="hljs-number">2</span>}, print )
+        </code></pre>
+      
+
+
+      <p>By <i>pinning</i> the pattern <code>{role:'math',cmd:'*'}</code> you created an object with methods that matched all the <code>cmd</code> properties.</p>
+    </div>
+
+  </div>
+
+  <div style="clear:both;"></div>
+
+
+
+
+  <h2>Why use Seneca?</h2>
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <p>
+        <i>Seneca</i> provides plugins - sets of commands - that look after the foundations of your app for you:
+      </p>
+
+      <br>
+
+      <ul>
+        <li>Organize your business logic</li>
+        <li>Network API</li>
+        <li>Data layer</li>
+        <li>Caching</li>
+        <li>Logging</li>
+        <li>User management</li>
+        <li>Distributed processing</li>
+      </ul>
+
+      <br>
+
+      <p>You write your own plugins and commands using the same system.</p>
+
+      <p><i>Seneca</i> is not a web framework, it's a business logic organizer. You can use it with any web framework.</p>
+
+      <p>Here's an example of how this helps you. Let's say the product command needs to live on a separate server. You can move it there with no changes to your calling code. First, set up the server:</p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+seneca.add({role:<span class="hljs-string">'math'</span>, cmd:<span class="hljs-string">'product'</span>}, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(args,callback)</span> </span>{
+  <span class="hljs-keyword">var</span> product = args.left * args.right
+  callback(<span class="hljs-literal">null</span>,{answer:product})
+})
+
+seneca.use(<span class="hljs-string">'transport'</span>)
+
+<span class="hljs-keyword">var</span> connect = <span class="hljs-built_in">require</span>(<span class="hljs-string">'connect'</span>)
+<span class="hljs-keyword">var</span> app = connect()
+  .use( connect.json() )
+  .use( seneca.service() )
+  .listen(<span class="hljs-number">10171</span>)
+        </code></pre>
+      
+
+      <p>
+        The <code>seneca.use</code> method loads in a plugin.
+        In this case, the transport plugin, which can accept commands over a HTTP interface.
+        <i>Seneca</i> exposes any plugin HTTP interface by returning a middleware function from the <code>seneca.service</code> method.
+        You can use this directly with the <a href="https://github.com/senchalabs/connect#readme" target="_blank">connect</a> or
+        <a href="http://expressjs.com/" target="_blank">express</a> modules.
+      </p>
+
+      <p>
+        On the client side, just <i>transport</i> the remote patterns:
+      </p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+seneca.use(<span class="hljs-string">'transport'</span>,{
+  pins:[ {role:<span class="hljs-string">'math'</span>,cmd:<span class="hljs-string">'product'</span>} ]
+})
+
+seneca.act( {role:<span class="hljs-string">'math'</span>, cmd:<span class="hljs-string">'product'</span>, left:<span class="hljs-number">3</span>, right:<span class="hljs-number">4</span>},
+            <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(err,result)</span> </span>{
+            <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+            <span class="hljs-built_in">console</span>.log(result)
+})
+        </code></pre>
+      
+
+      <p>The <code>pins</code> option to the <i>transport</i> plugin accepts a set of patterns that will be sent over to the server (running on localhost by default). The <i>transport</i> plugin just calls <code>seneca.add</code> for each pin, and proxies the input and output to the remote server.</p>
+
+      <p>Your calling code, the <code>seneca.act</code> call, <i>does not change</i>. You now have a distributed system with no refactoring. Fire up a few <i>math.product</i> servers, put them behind a load balancer, and now you have a scalable system too.</p>
+    </div>
+  </div>
+
+  <div style="clear:both;"></div>
+
+
+
+
+
+
+
+  <h2>But what about data storage?</h2>
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <p>You really need a common database layer so that plugins and commands can all deal with data in the same way.
+        Let's go with an <a href="http://en.wikipedia.org/wiki/Active_record_pattern" target="_blank">Active Record</a> style - it's nice and easy.</p>
+
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-keyword">var</span> product = seneca.make(<span class="hljs-string">'product'</span>)
+product.name = <span class="hljs-string">'apple'</span>
+product.price = <span class="hljs-number">100</span>
+
+product.save$(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( err, product )</span> </span>{
+  <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+  <span class="hljs-built_in">console</span>.log( <span class="hljs-string">'saved: '</span>+product )
+
+  <span class="hljs-comment">// product.id was generated for you</span>
+  product.load$({id:product.id},<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( err, product )</span> </span>{
+    <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+    <span class="hljs-built_in">console</span>.log( <span class="hljs-string">'loaded: '</span>+product )
+  })
+})
+        </code></pre>
+      
+
+      <p>
+        The <code>make</code> method creates an "Active Record"-ish object for you. The properties of this object store your data. Call the <code>save$</code> and <code>load$</code> methods to save and load your data from the database. You also get the <code>list$</code> method for queries, and <code>remove$</code> for deleting.
+      </p>
+
+      <p>
+        You get an in-memory data store automatically, so the above code works out of the box without any database configuration. Here's how you would use MongoDB:
+      </p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+seneca.use( <span class="hljs-string">'mongo-store'</span>,
+            {name:<span class="hljs-string">'mydata'</span>,host:<span class="hljs-string">'127.0.0.1'</span>,port:<span class="hljs-number">27017</span>} )
+
+seneca.ready( <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(err,seneca)</span></span>{
+  <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( <span class="hljs-string">'ERROR:'</span>+err )
+
+  <span class="hljs-keyword">var</span> product = seneca.make(<span class="hljs-string">'product'</span>)
+  product.name = <span class="hljs-string">'apple'</span>
+  product.price = <span class="hljs-number">100</span>
+
+  product.save$(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( err, product )</span> </span>{
+    <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+
+    <span class="hljs-comment">// product.id is a MongoDB id this time</span>
+    product.load$({id:product.id},<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( err, product )</span> </span>{
+      <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+      <span class="hljs-built_in">console</span>.log( <span class="hljs-string">'loaded: '</span>+product )
+    })
+  })
+})
+        </code></pre>
+      
+
+      <p>
+        The <code>seneca.use</code> method tells <i>Seneca</i> to load a plugin, including any commands the plugin exposes. In this case, you're loading the <i>mongo-store</i> plugin, which lets you talk to the MongoDB database.
+      </p>
+
+      <p>
+        To use the <i>mongo-store</i> plugin, you'll need to install it:
+      </p>
+
+      <pre class="highlight"><code class="hljs javascript">npm install seneca-mongo-store</code></pre>
+
+      <p>
+        The <code>seneca.ready</code> method waits for the database connection to be established. Apart from plugin configuration, your data logic code is <i>exactly the same</i>. Swapping databases at any stage of your project is trivial.
+      </p>
+
+      <p>How is the database layer implemented? It's just another set of commands. Here's the same code again:</p>
+
+      
+        <pre class="highlight"><code class="hljs javascript">
+<span class="hljs-keyword">var</span> product = seneca.make(<span class="hljs-string">'product'</span>)
+product.name = <span class="hljs-string">'apple'</span>
+product.price = <span class="hljs-number">100</span>
+
+seneca.act(
+  { role:<span class="hljs-string">'entity'</span>, cmd:<span class="hljs-string">'save'</span>, ent:product},
+  <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( err, product )</span> </span>{
+    <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+    <span class="hljs-built_in">console</span>.log( <span class="hljs-string">'saved: '</span>+product )
+
+    seneca.act(
+    <span class="hljs-comment">// q is: the query - find matching property values</span>
+    <span class="hljs-comment">// qent is: entity type we want back</span>
+    { role:<span class="hljs-string">'entity'</span>, cmd:<span class="hljs-string">'load'</span>, q:{id:product.id}, qent:product},
+      <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">( err, product )</span> </span>{
+        <span class="hljs-keyword">if</span>( err ) <span class="hljs-keyword">return</span> <span class="hljs-built_in">console</span>.error( err )
+        <span class="hljs-built_in">console</span>.log( <span class="hljs-string">'loaded: '</span>+product )
+    })
+  })
+        </code></pre>
+      
+
+      <p>
+        You can add support for your favorite database by writing a plugin with commands for each of the entity operations: <code>save</code>, <code>load</code>, etc. Here are some of the data stores <i>Seneca</i> supports:
+      </p>
+
+      <br>
+
+      <ul>
+        <li>Memory (transient) - built in</li>
+        <li>JSON files (on disk) - <a href="https://github.com/rjrodger/seneca-jsonfile-store" target="_blank">seneca-jsonfile-store</a></li>
+        <li>JSON resources (REST API) - <a href="https://github.com/rjrodger/seneca-jsonrest-api" target="_blank">seneca-jsonrest-store</a></li>
+        <li>MongoDB - <a href="https://github.com/rjrodger/seneca-mongo-store" target="_blank">seneca-mongo-store</a></li>
+        <li>MySQL - <a href="https://github.com/mirceaalexandru/seneca-mysql-store" target="_blank">seneca-mysql-store</a></li>
+        <li>PostgreSQL - <a href="https://github.com/marianr/seneca-postgres-store" target="_blank">seneca-postgres-store</a></li>
+        <li>Redis - <a href="https://github.com/bamse16/seneca-redis-store" target="_blank">seneca-redis-store</a></li>
+        <li>CouchDB - <a href="https://github.com/bamse16/seneca-couchdb-store" target="_blank">seneca-couch-store</a></li>
+        <li>SQLite - <a href="https://github.com/bamse16/seneca-sqlite-store" target="_blank">seneca-sqlite-store</a></li>
+      </ul>
+
+      <br>
+
+      <p>
+        You can even decide to save different entities into different databases - for example, put user profiles into MongoDB, purchase transactions into MySQL, and sessions into Redis. You do need to stay database independent by avoiding table joins, <a href="http://en.wikipedia.org/wiki/Denormalization" target="_blank"> but you don't need them anyway</a>!
+      </p>
+    </div>
+  </div>
+
+  <div style="clear:both;"></div>
+
+  <h3>What Next?</h3>
+
+
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <p>The article <a href="https://blog.engineyard.com/2013/deploying-node-app" target="_blank">Deploying a Production Node.js App to Engine Yard</a> takes you step by step through the process of building a real application with Seneca.</p>
+    </div>
+  </div>
+
+  <div style="clear:both;"></div>
+
+  <div class="sep">
+    <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+    <span class="rule-l">&nbsp;</span>
+    <span class="rule-r">&nbsp;</span>
+  </div>
+
+
+
+
+
+
+
+
+</div>
+
+<!-- END OF CONTAINER -->
+
+
+
+<footer>
+
+
+
+	<div class="footer-one">
+		<div class="col-md-12 column">
+
+
+			<div class="footer-logo">
+				<img src="images/logo-footer.png" alt="Seneca" title="Seneca">
+			</div>
+
+
+
+
+			<div class="row clearfix social">
+
+				<div class="col-md-4 column">
+					<p><a href="http://github.com/rjrodger/seneca"><i class="fa fa-github fa-2x"></i> Github</a></p>
+				</div>
+
+				<div class="col-md-4 column">
+					<p><a href="http://twitter.com/nodeseneca"><i class="fa fa-twitter fa-2x"></i> Twitter</a></p>
+				</div>
+
+				<div class="col-md-4 column">
+					<p><a href="http://senecajs.org/videos.html"><i class="fa fa-play-circle fa-2x"></i> Videos</a></p>
+				</div>
+
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+	<div class="footer-two">
+
+		© Seneca 2014 All Rights Reserved.
+
+	</div>
+
+</footer>
+
+<!-- FLEXSLIDER JAVASCRIPT CONTROLS -->
+
+<script defer="defer"  src="/staging/vendor/jquery_002.js"></script><script defer="defer"  src="/staging/scripts/scripts.js"></script>
+
+</body>
+</html>

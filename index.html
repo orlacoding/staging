@@ -1,0 +1,406 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Seneca, a Micro-Services toolkit for Node.js</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<link  rel="stylesheet" href="/staging/styles/bootstrap.css" />
+	<link  rel="stylesheet" href="/staging/styles/font-awesome/css/font-awesome.css" />
+	<link  rel="stylesheet" href="/staging/styles/style.css" />
+	<link  rel="stylesheet" href="/staging/styles/flexslider.css" />
+
+	<link  rel="stylesheet" href="/staging/styles/github.css" />
+
+	<!-- GOOGLE WEB FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=Bitter:400,700,400italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
+
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	<script src="scripts/html5shiv.js"></script>
+	<![endif]-->
+
+	<!-- Fav and touch icons -->
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="/images/favicon.png">
+
+	<script defer="defer"  src="/staging/vendor/jquery.js"></script><script defer="defer"  src="/staging/vendor/bootstrap.js"></script>
+	<script defer="defer"  src="/staging/scripts/menu.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+	<div class="navbar-960">
+
+		<!-- START TOP NAVBAR -->
+
+
+		<div class="navbar-header">
+			<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="index.html">Seneca</a>
+		</div>
+
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav top-nav">
+
+				<input type="hidden" class="selected-menu-item" value="index" />
+
+				<li id="index">
+					<a href="index.html"><i class="fa fa-home"></i></a>
+				</li>
+				<li id="getting-started">
+					<a href="getting-started.html" onload="">Get Started</a>
+				</li>
+				<li id="documentation">
+					<a href="documentation.html">Documentation</a>
+				</li>
+				<!--<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown">Dropdowns<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="index.html">Home Page</a>
+						</li>
+						<li>
+							<a href="content.html">Content Page</a>
+						</li>
+						<li>
+							<a href="content-leftmenu.html">Content Page - Left Sub Menu</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="content.html">Content Page</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="content-leftmenu.html">Content Page - Left Sub Menu</a>
+						</li>
+					</ul>
+				</li>-->
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li class="dropdown">
+					<a class="dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-life-ring"></i> Support<strong class="caret"></strong></a>
+					<ul class="dropdown-menu">
+						<li>
+							<a href="https://github.com/rjrodger/seneca">Source Code (GitHub)</a>
+						</li>
+						<li>
+							<a href="https://github.com/rjrodger/seneca/issues">Bugs! Defects! Breakage!</a>
+						</li>
+						<li>
+							<a href="https://groups.google.com/forum/#!forum/seneca-micro-services">Google Group</a>
+						</li>
+						<li class="divider">
+						</li>
+						<li>
+							<a href="https://twitter.com/senecajs">@senecajs</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+
+</nav>
+
+
+<!-- END TOP NAVBAR -->
+
+<div class="fullwidthtop">
+  <div class="row clearfix">
+    <div class="col-md-12 column">
+      <div class="header-box">
+        <img src="images/icon-top.png" alt="design, develop, organise code" title="design, develop, organise code" height="auto" width="460">
+        <h1 class="hp">design, develop &amp; organise your code</h1>
+        <h2 class="hp">Seneca is a Micro-Services toolkit for Node.js that will help you write clean, organised code that you can scale and deploy at any time <i class="fa fa-smile-o"></i></h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- CONTAINER STARTS HERE -->
+
+
+<div class="container">
+
+
+
+
+<h1 class="center">What is Seneca?</h1>
+
+
+<div class="row clearfix">
+  <div class="col-md-6 column">
+    <p>
+      Seneca provides plugins - sets of commands - that look after the foundations of your app for you. This toolkit lets you focus on the real, "business" code of your app. Instead of worrying about which database to use, how to structure your components, or how to manage dependencies, you can just start coding.
+    </p>
+  </div>
+
+  <div class="col-md-6 column">
+    <p>
+      You write everything as a command. Your commands get called whenever they match a set of properties. Your calling code doesn't know, or care, which command gets the work done. A JavaScript object goes in, and one comes out, asynchronously.
+    </p>
+  </div>
+
+</div>
+
+
+<a class="large-orange-button" href="what-is-seneca.html">Find out more <i class="fa fa-arrow-right"></i></a>
+
+
+
+<div style="clear:both;"></div>
+
+<a name=""></a>
+
+<div class="sep">
+  <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+  <span class="rule-l">&nbsp;</span>
+  <span class="rule-r">&nbsp;</span>
+</div>
+
+
+
+
+
+<!-- FLEXSLIDER WRAPPER START -->
+
+<div class="row clearfix">
+  <div class="col-md-12 column">
+
+    <h1 class="center">Why Should I Use It?</h1>
+
+    <div class="slider-wrapper">
+      <div  class="flexslider">
+        <ul class="slides">
+          <li class="flex-active-slide"><H2>Get Your Code Organized</H2><P>Where is the code that does X? - Seneca makes it obvious.</P>
+          </li>
+          <li>
+            <H2>Quickly Build Minimum Viable Products</H2><P>There are lots of plugins that give you things like user accounts, payments, social media, back office admin, all that good stuff.<BR>&nbsp;</P>
+          </li>
+          <li>
+            <H2>Write Micro-Services</H2><P>Easily break everything into little pieces, and deliver them any way you like, even using other languages (gasp).</P>
+          </li>
+          <li>
+            <H2>Why Scale Today When You Can Scale Tomorrow?</H2><P>Forgot to add a caching layer? Need to refactor technical debt? <br>No you dont.</P>
+          </li>
+          <li>
+            <H2>Enhance, Extend, Evolve</H2><P>Standard plugins not doing it for you? <br>Bending them to your will does not require API grokking.</P>
+          </li>
+          <li>
+            <H2>Light Touch Integration</H2><P>Got your own architecture? Fond of a framework? <br>Not a problem, Seneca does not want to take over the world.</P>
+          </li>
+          <li>
+            <H2>Mix and Match Databases and Other Services</H2><P>Need Mongo for user profiles, Postgres for purchases, and Redis for sessions? All in the same data model? Got it covered.<BR>&nbsp;</P>
+          </li>
+        </ul>
+        <ul class="flex-direction-nav"><li><a class="flex-prev" href="#">Previous</a></li><li><a class="flex-next" href="#">Next</a></li></ul></div>
+    </div>
+  </div>
+</div>
+
+<!-- FLEXSLIDER WRAPPER END -->
+
+
+
+
+
+
+
+
+
+<div style="clear:both;"></div>
+
+<a name=""></a>
+
+<div class="sep">
+  <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+  <span class="rule-l">&nbsp;</span>
+  <span class="rule-r">&nbsp;</span>
+</div>
+
+
+
+
+<h1 class="center">Try Seneca Now</h1>
+
+<div class="row clearfix hp">
+  <div class="col-md-4 column">
+
+    <a class="orange-box" href="download-install.html"><i class="fa fa-download fa-5x"></i><h3>Download &amp; Install</h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</a>
+
+  </div>
+  <div class="col-md-4 column">
+
+    <a class="orange-box" href="plugins.html"><i class="fa fa-plug fa-5x"></i><h3>Seneca Plugins</h3>Provide the basic business logic for many common use cases</a>
+
+  </div>
+  <div class="col-md-4 column">
+
+    <a class="orange-box" href="http://senecajs.tumblr.com/" target="_blank"><i class="fa fa-refresh fa-5x"></i><h3>Updates &amp; Releases</h3>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam</a>
+
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="clear:both;"></div>
+
+<a name=""></a>
+
+<div class="sep">
+  <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+  <span class="rule-l">&nbsp;</span>
+  <span class="rule-r">&nbsp;</span>
+</div>
+
+
+
+
+<h1 class="center">User Guides &amp; Docs</h1>
+
+
+<div class="row clearfix">
+  <div class="col-md-4 column">
+
+    <a class="white-box" href="https://github.com/rjrodger/seneca" target="_blank"><i class="fa fa-github fa-5x"></i><h3 class="home-action">Seneca on Github</h3><h5 class="sep-small">—</h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod</a>
+
+  </div>
+  <div class="col-md-4 column white-box">
+
+    <a class="white-box" href="videos.html"><i class="fa fa-play-circle fa-5x"></i><h3 class="home-action">Videos/Slides</h3><h5 class="sep-small">—</h5>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperia</a>
+
+
+  </div>
+  <div class="col-md-4 column white-box">
+
+    <a class="white-box" href="getting-started.html"><i class="fa fa-file-code-o fa-5x"></i><h3 class="home-action">Getting Started</h3><h5 class="sep-small">—</h5>This toolkit lets you focus on the real, "business" code of your app. Instead of worrying about which database to use, how to structure your components, or how to manage dependencies, you can just start coding.</a>
+
+
+  </div>
+</div>
+
+
+
+<a class="large-orange-button" href="documentation.html">See More Of Our Documentation <i class="fa fa-arrow-right"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="clear:both;"></div>
+
+<a name=""></a>
+
+<div class="sep">
+  <span class="star"><img src="images/star.png" alt="star" height="auto" width="20"></span>
+  <span class="rule-l">&nbsp;</span>
+  <span class="rule-r">&nbsp;</span>
+</div>
+
+
+
+<h1 class="center">Look who's using Seneca <i class="fa fa-smile-o"></i></h1>
+
+<div style="text-align: center;"><img src="images/users-logo.png" alt="Look who's using Seneca" TITLE="Look who's using Seneca"></div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<!-- END OF CONTAINER -->
+
+
+
+<footer>
+
+
+
+	<div class="footer-one">
+		<div class="col-md-12 column">
+
+
+			<div class="footer-logo">
+				<img src="images/logo-footer.png" alt="Seneca" title="Seneca">
+			</div>
+
+
+
+
+			<div class="row clearfix social">
+
+				<div class="col-md-4 column">
+					<p><a href="http://github.com/rjrodger/seneca"><i class="fa fa-github fa-2x"></i> Github</a></p>
+				</div>
+
+				<div class="col-md-4 column">
+					<p><a href="http://twitter.com/nodeseneca"><i class="fa fa-twitter fa-2x"></i> Twitter</a></p>
+				</div>
+
+				<div class="col-md-4 column">
+					<p><a href="http://senecajs.org/videos.html"><i class="fa fa-play-circle fa-2x"></i> Videos</a></p>
+				</div>
+
+			</div>
+
+
+
+
+
+		</div>
+	</div>
+
+
+
+	<div class="footer-two">
+
+		© Seneca 2014 All Rights Reserved.
+
+	</div>
+
+</footer>
+
+<!-- FLEXSLIDER JAVASCRIPT CONTROLS -->
+
+<script defer="defer"  src="/staging/vendor/jquery_002.js"></script><script defer="defer"  src="/staging/scripts/scripts.js"></script>
+
+</body>
+</html>
